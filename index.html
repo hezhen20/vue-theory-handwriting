@@ -15,18 +15,13 @@
       data() {
         return {
           msg: 'hello vue',
-          a: 1,
-          b: {
-            b: {
-              b: 2
-            }
-          }
+          arr: [1,2,3],
+          b: {name: 'hzz'}
         }
       }
     })
-    console.log(vm._data);
-    vm._data.a = 2
-    vm._data.b.b.b = 3
+    vm._data.arr.push({name: 'xxx'})
+    vm._data.arr[3].name = 'yyy'
   </script>
 </body>
 </html>
