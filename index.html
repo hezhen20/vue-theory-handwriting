@@ -7,7 +7,7 @@
   <title>Document</title>
 </head>
 <body>
-  <div id="app"></div>
+  <div id="app" class="nice">{{msg}}<span>{{b.name}}</span></div>
   <script src="dist/umd/vue.js"></script>
   <script>
     let vm = new Vue({
@@ -16,12 +16,10 @@
         return {
           msg: 'hello vue',
           arr: [1,2,3],
-          b: {name: 'hzz'}
+          b: {name: 'hzz', age: 23}
         }
       }
     })
-    vm.arr.push({name: 'xxx'})
-    vm.arr[3].name = 'yyy'
   </script>
 </body>
 </html>
