@@ -6,7 +6,6 @@ const endTag = new RegExp(`^<\\/${qnameCapture}[^>]*>`)  // 匹配标签结尾�
 // 匹配属性  a="aaa" a='aaa' a=aaa
 const attribute = /^\s*([^\s"'<>\/=]+)(?:\s*(=)\s*(?:"([^"]*)"+|'([^']*)'+|([^\s"'=<>`]+)))?/
 const startTagClose = /^\s*(\/?)>/    // 匹配标签结束
-const defaultTagRE = /\{\{((?:.|\n)+?)\}\}/g
 
 
 export function parseHTML(html) {
