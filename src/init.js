@@ -1,4 +1,5 @@
 import { compileToFunctions } from "./compiler/index"
+import { mountComponent } from "./lifecycle"
 import { initSate } from "./state"
 
 export function initMixin(Vue) {
@@ -31,5 +32,8 @@ export function initMixin(Vue) {
       // 如此一来，不管是自己手动写的render方法，还是通过template生成的render方法，现在都拿到了
       options.render = render
     }
+
+    // 挂载这个组件
+    mountComponent(vm, el)
   }
 }
