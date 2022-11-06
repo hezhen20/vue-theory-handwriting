@@ -20,7 +20,7 @@ export function renderMixin(Vue) {
 }
 
 function createElement(tag, data={}, ...children) {
-    return vnode(tag, data, data.key, ...children)
+    return vnode(tag, data, data.key, children)
 }
 function createTextVnode(text) {
     return vnode(undefined, undefined, undefined, undefined, text)
