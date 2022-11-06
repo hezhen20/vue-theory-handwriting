@@ -20,6 +20,7 @@ export function initMixin(Vue) {
     const vm = this
     const options = vm.$options
     el = document.querySelector(el)
+    vm.$el = el
 
     if (!options.render) {
       // 如果没有render函数，就看看有没有template，template没有就直接找外部的html
